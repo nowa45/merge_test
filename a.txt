@@ -1,2 +1,5 @@
 first change
 second change
+before release 1
+:wq
+
