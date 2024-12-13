@@ -23,5 +23,5 @@ jobs:
         env:
           GREN_GITHUB_TOKEN: ${{ secrets.GREN_GITHUB_TOKEN }}
         run: |
-          gren release -o
+          gren release -o --token=${{ secrets.GREN_GITHUB_TOKEN }}
           
