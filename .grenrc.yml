@@ -1,6 +1,6 @@
 ---
-  dataSource: "issues"
+  dataSource: "prs"
   prefix: ""
   onlyMilestones: false
-  groupBy: "label"
+  groupBy: false
   changelogFilename: "CHANGELOG.md"
