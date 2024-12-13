@@ -1,0 +1,10 @@
+{
+    "dataSource": "milestones",
+    "prefix": "",
+    "groupBy": {
+        "Enhancements:": [":fire: enhancement", "internal"],
+        "Bug Fixes:": [":bug: bug"]
+    },
+    "milestoneMatch": "Release {{tag_name}}",
+    "changelogFilename": "CHANGELOG.md"
+}

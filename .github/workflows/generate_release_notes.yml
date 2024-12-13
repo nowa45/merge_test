@@ -1,0 +1,28 @@
+name: Generate Release Notes
+
+on:
+  push:
+    tags:
+      - "*"  # Triggers on any tag creation
+
+jobs:
+  generate-release-notes:
+    runs-on: ubuntu-latest
+    environment: myenvironment 
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        
+      - name: Install github-release-notes
+        run: npm install -g github-release-notes
+
+      - name: Generate release notes
+        env:
+          GREN_GITHUB_TOKEN: ${{ secrets.GREN_GITHUB_TOKEN }}
+        run: |
+          gren release -o
+          
